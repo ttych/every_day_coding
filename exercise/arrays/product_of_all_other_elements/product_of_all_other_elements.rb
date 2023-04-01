@@ -6,8 +6,8 @@ require 'minitest/autorun'
 def poaoe_v1(input)
   result = [1] * input.size
   input.each.with_index do |value, index|
-    result.each.with_index do |r_value, r_index|
-      result[r_index] = r_value * value if index != r_index
+    result.size.times do |r_index|
+      result[r_index] *= value if index != r_index
     end
   end
   result
